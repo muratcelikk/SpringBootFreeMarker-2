@@ -25,12 +25,12 @@ public class MainController {
     private String message;
 
     @RequestMapping(value = {"/", "/index"}, method = RequestMethod.GET)
-    private String index(Model model) {
+    public String index(Model model) {
         model.addAttribute("message", message);
         return "index";
     }
     @RequestMapping(value = {"/personList"}, method = RequestMethod.GET)
-    private String personList(Model model){
+    public String personList(Model model){
         model.addAttribute("persons", persons);
         return "personList";
     }
